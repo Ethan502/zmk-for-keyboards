@@ -164,7 +164,7 @@
             bindings = <
                 &none          &kp Q           &kp W             &kp E             &kp R             &kp T             &kp Y           &kp U             &kp I             &kp O             &kp P           &none
                 &none          &hm LGUI A      &hm LALT S        &hm LCTRL D       &hm LSHFT F       &kp G             &kp H           &hm LSHFT J       &hm LCTRL K       &hm RALT L        &hm LGUI SQT    &none
-                &none          &ltq mouse Z          &hm RALT X        &kp C             &kp V             &kp B             &kp N           &kp M             &kp COMMA         &hm RALT DOT      &ltq 5 SLASH      &none
+                &none          &ltq mouse Z          &hm RALT X        &kp C             &kp V             &kp B             &kp N           &kp M             &kp COMMA         &hm RALT DOT      &ltq mouse SLASH      &none
                                              &ltq media ESC           &ltq nav TAB           &ltq mouse SPACE         &ltq sym RET         &ltq num BSPC         &ltq fun DEL
             >;
         };
