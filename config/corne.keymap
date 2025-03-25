@@ -90,7 +90,6 @@
  * Layout: 6 columns per half (12 total per row), 3 keys on bottom row per half
  */
 
-/ {
     aliases {
         base  = &default_layer;
         fun   = &fun_layer;
