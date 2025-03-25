@@ -133,24 +133,24 @@
         rgb_bri { compatible = "zmk,behavior-rgb-brightness-increase"; label = "RGB_BRI"; };
         rgb_tog { compatible = "zmk,behavior-rgb-toggle"; label = "RGB_TOG"; };
 
-        mkp_l { compatible = "zmk,behavior-mouse-move"; label = "MKP_L"; move-x = < -10 >; };
-        mkp_r { compatible = "zmk,behavior-mouse-move"; label = "MKP_R"; move-x = < 10 >; };
-        mkp_u { compatible = "zmk,behavior-mouse-move"; label = "MKP_U"; move-y = < -10 >; };
-        mkp_d { compatible = "zmk,behavior-mouse-move"; label = "MKP_D"; move-y = < 10 >; };
+        mkp_l { compatible = "zmk,behavior-mouse-move"; label = "MKP_L"; move-x = <-10>; };
+        mkp_r { compatible = "zmk,behavior-mouse-move"; label = "MKP_R"; move-x = <10>; };
+        mkp_u { compatible = "zmk,behavior-mouse-move"; label = "MKP_U"; move-y = <-10>; };
+        mkp_d { compatible = "zmk,behavior-mouse-move"; label = "MKP_D"; move-y = <10>; };
 
-        wkp_l { compatible = "zmk,behavior-mouse-scroll"; label = "WKP_L"; scroll-x = < -1 >; };
-        wkp_r { compatible = "zmk,behavior-mouse-scroll"; label = "WKP_R"; scroll-x = < 1 >; };
-        wkp_u { compatible = "zmk,behavior-mouse-scroll"; label = "WKP_U"; scroll-y = < 1 >; };
-        wkp_d { compatible = "zmk,behavior-mouse-scroll"; label = "WKP_D"; scroll-y = < -1 >; };
+        wkp_l { compatible = "zmk,behavior-mouse-scroll"; label = "WKP_L"; scroll-x = <-1>; };
+        wkp_r { compatible = "zmk,behavior-mouse-scroll"; label = "WKP_R"; scroll-x = <1>; };
+        wkp_u { compatible = "zmk,behavior-mouse-scroll"; label = "WKP_U"; scroll-y = <1>; };
+        wkp_d { compatible = "zmk,behavior-mouse-scroll"; label = "WKP_D"; scroll-y = <-1>; };
 
-        btn1 { compatible = "zmk,behavior-mouse-button"; label = "BTN1"; bindings = < 0 >; };
-        btn2 { compatible = "zmk,behavior-mouse-button"; label = "BTN2"; bindings = < 1 >; };
-        btn3 { compatible = "zmk,behavior-mouse-button"; label = "BTN3"; bindings = < 2 >; };
+        btn1 { compatible = "zmk,behavior-mouse-button"; label = "BTN1"; bindings = <0>; };
+        btn2 { compatible = "zmk,behavior-mouse-button"; label = "BTN2"; bindings = <1>; };
+        btn3 { compatible = "zmk,behavior-mouse-button"; label = "BTN3"; bindings = <2>; };
 
-        bt_sel_0 { compatible = "zmk,behavior-bluetooth-select"; label = "BT_SEL_0"; bindings = < 0 >; };
-        bt_sel_1 { compatible = "zmk,behavior-bluetooth-select"; label = "BT_SEL_1"; bindings = < 1 >; };
-        bt_sel_2 { compatible = "zmk,behavior-bluetooth-select"; label = "BT_SEL_2"; bindings = < 2 >; };
-        bt_sel_3 { compatible = "zmk,behavior-bluetooth-select"; label = "BT_SEL_3"; bindings = < 3 >; };
+        bt_sel_0 { compatible = "zmk,behavior-bluetooth-select"; label = "BT_SEL_0"; bindings = <0>; };
+        bt_sel_1 { compatible = "zmk,behavior-bluetooth-select"; label = "BT_SEL_1"; bindings = <1>; };
+        bt_sel_2 { compatible = "zmk,behavior-bluetooth-select"; label = "BT_SEL_2"; bindings = <2>; };
+        bt_sel_3 { compatible = "zmk,behavior-bluetooth-select"; label = "BT_SEL_3"; bindings = <3>; };
 
         out_tog { compatible = "zmk,behavior-output-toggle"; label = "OUT_TOG"; };
         ep_tog  { compatible = "zmk,behavior-ext-power-toggle"; label = "EP_TOG"; };
