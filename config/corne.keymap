@@ -99,62 +99,187 @@
         mouse = &mouse_layer;
         media = &media_layer;
     };
-    behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <180>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-            global-quick-tap;
-        };
+     behaviors {
 
-        ltq: ltq {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LTQ";
-            #binding-cells = <2>;
-            tapping-term-ms = <600>;
-            quick-tap-ms = <400>;
-            flavor = "tap-preferred";
-            bindings = <&mo>, <&kp>;
-            global-quick-tap;
-        };
-
-        caps_word {
-            compatible = "zmk,behavior-caps-word";
-            label = "CAPS_WORD";
-        };
-
-        rgb_eff { compatible = "zmk,behavior-rgb-effect-next"; label = "RGB_EFF"; };
-        rgb_hue { compatible = "zmk,behavior-rgb-hue-increase"; label = "RGB_HUE"; };
-        rgb_sat { compatible = "zmk,behavior-rgb-sat-increase"; label = "RGB_SAT"; };
-        rgb_bri { compatible = "zmk,behavior-rgb-brightness-increase"; label = "RGB_BRI"; };
-        rgb_tog { compatible = "zmk,behavior-rgb-toggle"; label = "RGB_TOG"; };
-
-        mkp_l { compatible = "zmk,behavior-mouse-move"; label = "MKP_L"; move-x = -10; };
-        mkp_r { compatible = "zmk,behavior-mouse-move"; label = "MKP_R"; move-x = 10; };
-        mkp_u { compatible = "zmk,behavior-mouse-move"; label = "MKP_U"; move-y = -10; };
-        mkp_d { compatible = "zmk,behavior-mouse-move"; label = "MKP_D"; move-y = 10; };
-
-        wkp_l { compatible = "zmk,behavior-mouse-scroll"; label = "WKP_L"; scroll-x = -1; };
-        wkp_r { compatible = "zmk,behavior-mouse-scroll"; label = "WKP_R"; scroll-x = 1; };
-        wkp_u { compatible = "zmk,behavior-mouse-scroll"; label = "WKP_U"; scroll-y = 1; };
-        wkp_d { compatible = "zmk,behavior-mouse-scroll"; label = "WKP_D"; scroll-y = -1; };
-
-        btn1 { compatible = "zmk,behavior-mouse-button"; label = "BTN1"; bindings = 0; };
-        btn2 { compatible = "zmk,behavior-mouse-button"; label = "BTN2"; bindings = 1; };
-        btn3 { compatible = "zmk,behavior-mouse-button"; label = "BTN3"; bindings = 2; };
-
-        bt_sel_0 { compatible = "zmk,behavior-bluetooth-select"; label = "BT_SEL_0"; bindings = 0; };
-        bt_sel_1 { compatible = "zmk,behavior-bluetooth-select"; label = "BT_SEL_1"; bindings = 1; };
-        bt_sel_2 { compatible = "zmk,behavior-bluetooth-select"; label = "BT_SEL_2"; bindings = 2; };
-        bt_sel_3 { compatible = "zmk,behavior-bluetooth-select"; label = "BT_SEL_3"; bindings = 3; };
-
-        out_tog { compatible = "zmk,behavior-output-toggle"; label = "OUT_TOG"; };
-        ep_tog  { compatible = "zmk,behavior-ext-power-toggle"; label = "EP_TOG"; };
+    hm: homerow_mods {
+      compatible = "zmk,behavior-hold-tap";
+      label = "HOMEROW_MODS";
+      #binding-cells = <2>;
+      tapping-term-ms = <200>;
+      quick-tap-ms = <180>;
+      flavor = "tap-preferred";
+      bindings = <&kp>, <&kp>;
+      global-quick-tap;
     };
+
+    ltq: ltq {
+      compatible = "zmk,behavior-hold-tap";
+      label = "LTQ";
+      #binding-cells = <2>;
+      tapping-term-ms = <600>;
+      quick-tap-ms = <400>;
+      flavor = "tap-preferred";
+      bindings = <&mo>, <&kp>;
+      global-quick-tap;
+    };
+
+    caps_word {
+      compatible = "zmk,behavior-caps-word";
+      label = "CAPS_WORD";
+      #binding-cells = <0>;
+    };
+
+    rgb_eff {
+      compatible = "zmk,behavior-rgb-effect-next";
+      label = "RGB_EFF";
+      #binding-cells = <0>;
+    };
+
+    rgb_hue {
+      compatible = "zmk,behavior-rgb-hue-increase";
+      label = "RGB_HUE";
+      #binding-cells = <0>;
+    };
+
+    rgb_sat {
+      compatible = "zmk,behavior-rgb-sat-increase";
+      label = "RGB_SAT";
+      #binding-cells = <0>;
+    };
+
+    rgb_bri {
+      compatible = "zmk,behavior-rgb-brightness-increase";
+      label = "RGB_BRI";
+      #binding-cells = <0>;
+    };
+
+    rgb_tog {
+      compatible = "zmk,behavior-rgb-toggle";
+      label = "RGB_TOG";
+      #binding-cells = <0>;
+    };
+
+    // Mouse Move
+    mkp_l {
+      compatible = "zmk,behavior-mouse-move";
+      label = "MKP_L";
+      #binding-cells = <0>;
+      move-x = -10;
+    };
+
+    mkp_r {
+      compatible = "zmk,behavior-mouse-move";
+      label = "MKP_R";
+      #binding-cells = <0>;
+      move-x = 10;
+    };
+
+    mkp_u {
+      compatible = "zmk,behavior-mouse-move";
+      label = "MKP_U";
+      #binding-cells = <0>;
+      move-y = -10;
+    };
+
+    mkp_d {
+      compatible = "zmk,behavior-mouse-move";
+      label = "MKP_D";
+      #binding-cells = <0>;
+      move-y = 10;
+    };
+
+    // Mouse Scroll
+    wkp_l {
+      compatible = "zmk,behavior-mouse-scroll";
+      label = "WKP_L";
+      #binding-cells = <0>;
+      scroll-x = -1;
+    };
+
+    wkp_r {
+      compatible = "zmk,behavior-mouse-scroll";
+      label = "WKP_R";
+      #binding-cells = <0>;
+      scroll-x = 1;
+    };
+
+    wkp_u {
+      compatible = "zmk,behavior-mouse-scroll";
+      label = "WKP_U";
+      #binding-cells = <0>;
+      scroll-y = 1;
+    };
+
+    wkp_d {
+      compatible = "zmk,behavior-mouse-scroll";
+      label = "WKP_D";
+      #binding-cells = <0>;
+      scroll-y = -1;
+    };
+
+    // Mouse Buttons
+    btn1 {
+      compatible = "zmk,behavior-mouse-button";
+      label = "BTN1";
+      #binding-cells = <1>;
+      bindings = <0>;
+    };
+
+    btn2 {
+      compatible = "zmk,behavior-mouse-button";
+      label = "BTN2";
+      #binding-cells = <1>;
+      bindings = <1>;
+    };
+
+    btn3 {
+      compatible = "zmk,behavior-mouse-button";
+      label = "BTN3";
+      #binding-cells = <1>;
+      bindings = <2>;
+    };
+
+    // Bluetooth Select
+    bt_sel_0 {
+      compatible = "zmk,behavior-bluetooth-select";
+      label = "BT_SEL_0";
+      #binding-cells = <1>;
+      bindings = <0>;
+    };
+
+    bt_sel_1 {
+      compatible = "zmk,behavior-bluetooth-select";
+      label = "BT_SEL_1";
+      #binding-cells = <1>;
+      bindings = <1>;
+    };
+
+    bt_sel_2 {
+      compatible = "zmk,behavior-bluetooth-select";
+      label = "BT_SEL_2";
+      #binding-cells = <1>;
+      bindings = <2>;
+    };
+
+    bt_sel_3 {
+      compatible = "zmk,behavior-bluetooth-select";
+      label = "BT_SEL_3";
+      #binding-cells = <1>;
+      bindings = <3>;
+    };
+
+    out_tog {
+      compatible = "zmk,behavior-output-toggle";
+      label = "OUT_TOG";
+      #binding-cells = <0>;
+    };
+
+    ep_tog {
+      compatible = "zmk,behavior-ext-power-toggle";
+      label = "EP_TOG";
+      #binding-cells = <0>;
+    };
+  };
 
         keymap {
         compatible = "zmk,keymap";
