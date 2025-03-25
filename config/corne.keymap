@@ -90,9 +90,6 @@
  * Layout: 6 columns per half (12 total per row), 3 keys on bottom row per half
  */
 
-#include <behaviors.dtsi>
-#include "keymap.dtsi"
-
 / {
     aliases {
         base  = &default_layer;
