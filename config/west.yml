@@ -30,12 +30,6 @@ manifest:
     - name: nice-view-elemental
       remote: kevinpastor
       revision: main
-    - name: nice-view-gem
-      remote: m165437
-      revision: main
-    - name: zmk-shield-nice-view-cats
-      remote: s6t
-      revision: main
     - name: nice-view-battery
       remote: infely
       revision: main
