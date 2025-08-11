@@ -1,0 +1,23 @@
+# ZMK build artifacts
+build/
+*.uf2
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+
+# Python cache files (for local keymap-drawer testing)
+__pycache__/
+*.pyc
+
+# Temporary files
+*.tmp
+*.bak
+
+# Local testing output (uncomment if you don't want to commit generated files locally)
+# keymap-drawer/*.svg
+# keymap-drawer/*.yaml
