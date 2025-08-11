@@ -37,12 +37,12 @@ layers:
   - ','
   - {t: ., h: RALT}
   - {t: /, h: Button}
-  - {t: ESC, h: Media}
-  - {t: TAB, h: Nav}
-  - {t: SPACE, h: Mouse}
+  - {t: '$$mdi:keyboard-esc$$', h: Media}
+  - {t: '$$mdi:keyboard-tab$$', h: Nav}
+  - {t: '$$mdi:keyboard-space$$', h: Mouse}
   - {t: RET, h: Sym}
-  - {t: BSPC, h: Num}
-  - {t: DEL, h: Fun}
+  - {t: '$$mdi:backspace-outline$$', h: Num}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: Fun}
   Extra:
   - Q
   - W
@@ -80,13 +80,14 @@ layers:
   - ','
   - {t: ., h: RALT}
   - {t: /, h: Button}
-  - {t: ESC, h: Media}
-  - {t: TAB, h: Nav}
-  - {t: SPACE, h: Mouse}
+  - {t: '$$mdi:keyboard-esc$$', h: Media}
+  - {t: '$$mdi:keyboard-tab$$', h: Nav}
+  - {t: '$$mdi:keyboard-space$$', h: Mouse}
   - {t: RET, h: Sym}
-  - {t: BSPC, h: Num}
-  - {t: DEL, h: Fun}
-  Tap: [Q, W, E, R, T, '', '', Y, U, I, O, P, A, S, D, F, G, '', '', H, J, K, L, '''', Z, X, C, V, B, '', '', N, M, ',', ., /, ESC, SPACE, TAB, RET, BSPC, DEL]
+  - {t: '$$mdi:backspace-outline$$', h: Num}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: Fun}
+  Tap: [Q, W, E, R, T, '', '', Y, U, I, O, P, A, S, D, F, G, '', '', H, J, K, L, '''', Z, X, C, V, B, '', '', N, M, ',', ., /, '$$mdi:keyboard-esc$$', '$$mdi:keyboard-space$$',
+    '$$mdi:keyboard-tab$$', RET, '$$mdi:backspace-outline$$', '$$mdi:backspace-reverse-outline$$']
   Button:
   - UNDO
   - Sft+DEL
@@ -131,7 +132,7 @@ layers:
   - '&mkp MB1'
   - '&mkp MB3'
   Nav:
-  - $$settings$$
+  - $$mdi:restart$$
   - '&u_to_U_TAP'
   - '&u_to_U_EXTRA'
   - '&u_to_U_BASE'
@@ -150,10 +151,10 @@ layers:
   - ''
   - ''
   - ''
-  - $$arrow_left$$
-  - $$arrow_down$$
-  - $$arrow_up$$
-  - $$arrow_right$$
+  - $$mdi:arrow-left$$
+  - $$mdi:arrow-down$$
+  - $$mdi:arrow-up$$
+  - $$mdi:arrow-right$$
   - {t: '&caps_word', s: CAPS}
   - ''
   - RALT
@@ -162,7 +163,7 @@ layers:
   - ''
   - ''
   - ''
-  - $$home$$
+  - $$mdi:home$$
   - PG DN
   - PG UP
   - END
@@ -171,10 +172,10 @@ layers:
   - {type: held}
   - ''
   - RET
-  - BSPC
-  - DEL
+  - $$mdi:backspace-outline$$
+  - $$mdi:backspace-reverse-outline$$
   Mouse:
-  - $$settings$$
+  - $$mdi:restart$$
   - '&u_to_U_TAP'
   - '&u_to_U_EXTRA'
   - '&u_to_U_BASE'
@@ -217,18 +218,18 @@ layers:
   - '&mkp MB1'
   - '&mkp MB3'
   Media:
-  - $$settings$$
+  - $$mdi:restart$$
   - '&u_to_U_TAP'
   - '&u_to_U_EXTRA'
   - '&u_to_U_BASE'
   - ''
   - ''
   - ''
-  - RGB+
-  - H+
-  - S+
-  - $$brightness$$
-  - $$rgb$$
+  - $$mdi:auto-mode$$
+  - $$mdi:palette$$
+  - $$mdi:water-plus$$
+  - $$mdi:brightness-7$$
+  - $$mdi:led-strip-variant$$
   - LGUI
   - LALT
   - LCTRL
@@ -236,10 +237,10 @@ layers:
   - ''
   - ''
   - ''
-  - $$prev$$
-  - $$vol_down$$
-  - $$vol_up$$
-  - $$next$$
+  - $$mdi:skip-previous$$
+  - $$mdi:volume-minus$$
+  - $$mdi:volume-plus$$
+  - $$mdi:skip-next$$
   - EP TOG
   - ''
   - RALT
@@ -248,17 +249,17 @@ layers:
   - ''
   - ''
   - ''
-  - {t: BT 1, s: '&u_macro_u_bt_sel_0'}
-  - {t: BT 2, s: '&u_macro_u_bt_sel_1'}
-  - {t: BT 3, s: '&u_macro_u_bt_sel_2'}
-  - {t: BT 4, s: '&u_macro_u_bt_sel_3'}
+  - {t: '$$mdi:numeric-1-circle$$', s: '&u_macro_u_bt_sel_0'}
+  - {t: '$$mdi:numeric-2-circle$$', s: '&u_macro_u_bt_sel_1'}
+  - {t: '$$mdi:numeric-3-circle$$', s: '&u_macro_u_bt_sel_2'}
+  - {t: '$$mdi:numeric-4-circle$$', s: '&u_macro_u_bt_sel_3'}
   - {t: OUT TOG, s: OUT USB}
   - {type: held}
   - ''
   - ''
   - STOP
-  - $$play$$
-  - $$mute$$
+  - $$mdi:play-pause$$
+  - $$mdi:volume-off$$
   Num:
   - '['
   - '7'
@@ -271,7 +272,7 @@ layers:
   - '&u_to_U_BASE'
   - '&u_to_U_EXTRA'
   - '&u_to_U_TAP'
-  - $$settings$$
+  - $$mdi:restart$$
   - ;
   - '4'
   - '5'
@@ -314,7 +315,7 @@ layers:
   - '&u_to_U_BASE'
   - '&u_to_U_EXTRA'
   - '&u_to_U_TAP'
-  - $$settings$$
+  - $$mdi:restart$$
   - ':'
   - $
   - '%'
@@ -357,7 +358,7 @@ layers:
   - '&u_to_U_BASE'
   - '&u_to_U_EXTRA'
   - '&u_to_U_TAP'
-  - $$settings$$
+  - $$mdi:restart$$
   - F11
   - F4
   - F5
@@ -383,8 +384,8 @@ layers:
   - RALT
   - ''
   - APP
-  - SPACE
-  - TAB
+  - $$mdi:keyboard-space$$
+  - $$mdi:keyboard-tab$$
   - ''
   - ''
   - {type: held}
