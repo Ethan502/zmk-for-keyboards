@@ -55,18 +55,18 @@ draw_config:
   # Modern color theme - inspired by latest keymap-drawer examples
   svg_style: |
     /* Modern keymap-drawer style with light theme */
-    .keycap {
+    .key {
       fill: #ffffff;
       stroke: #e1e5e9;
       stroke-width: 1.5;
       filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
     }
-    .keycap.held {
+    .key.held {
       fill: #f0f9ff;
       stroke: #0ea5e9;
       stroke-width: 2;
     }
-    .keycap.ghost {
+    .key.ghost {
       stroke-dasharray: 4, 4;
       fill: #f8fafc;
       stroke: #cbd5e1;
@@ -80,17 +80,17 @@ draw_config:
       stroke-width: 1.5;
       filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
     }
-    .keycode {
+    text.key {
       fill: #1e293b;
       font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
       font-weight: 500;
     }
-    .shifted {
+    text.shifted {
       fill: #64748b;
       font-size: 12px;
       font-weight: 400;
     }
-    .hold {
+    text.hold {
       fill: #475569;
       font-size: 12px;
       font-weight: 400;
@@ -100,7 +100,7 @@ draw_config:
       font-weight: 600;
     }
     /* Layer styling */
-    text.layer_text {
+    text.label {
       fill: #334155;
       font-size: 16px;
       font-weight: 600;
