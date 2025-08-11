@@ -5,158 +5,211 @@ parse_config:
   # Remove specific prefixes (if you use locale headers)
   zmk_remove_keycode_prefix: []
   
-  # Custom key mapping - Makes generated diagrams cleaner and more readable
+  # Custom key mapping - Modern and clean display with SVG icons
   raw_binding_map:
-    "&bootloader": "BOOT"
-    "&sys_reset": "RST"
-    "&bt BT_CLR": "BT CLR"
-    "&bt BT_SEL 0": "BT 0"
-    "&bt BT_SEL 1": "BT 1"
-    "&bt BT_SEL 2": "BT 2"
-    "&bt BT_SEL 3": "BT 3"
-    "&bt BT_SEL 4": "BT 4"
-    "&rgb_ug RGB_TOG": "RGB"
-    "&rgb_ug RGB_EFF": "EFF"
-    "&rgb_ug RGB_HUI": "HUI"
-    "&rgb_ug RGB_HUD": "HUD"
-    "&rgb_ug RGB_SAI": "SAI"
-    "&rgb_ug RGB_SAD": "SAD"
-    "&rgb_ug RGB_BRI": "BRI"
-    "&rgb_ug RGB_BRD": "BRD"
-    "&kp C_VOL_UP": "VOL+"
-    "&kp C_VOL_DN": "VOL-"
-    "&kp C_MUTE": "MUTE"
-    "&kp C_PP": "PLAY"
-    "&kp C_PREV": "PREV"
-    "&kp C_NEXT": "NEXT"
+    "&bootloader": "$$settings$$"
+    "&sys_reset": "$$settings$$"
+    "&bt BT_CLR": "$$bluetooth$$"
+    "&bt BT_SEL 0": "BT 1"
+    "&bt BT_SEL 1": "BT 2"
+    "&bt BT_SEL 2": "BT 3"
+    "&bt BT_SEL 3": "BT 4"
+    "&bt BT_SEL 4": "BT 5"
+    "&rgb_ug RGB_TOG": "$$rgb$$"
+    "&rgb_ug RGB_EFF": "RGB+"
+    "&rgb_ug RGB_HUI": "H+"
+    "&rgb_ug RGB_HUD": "H-"
+    "&rgb_ug RGB_SAI": "S+"
+    "&rgb_ug RGB_SAD": "S-"
+    "&rgb_ug RGB_BRI": "$$brightness$$"
+    "&rgb_ug RGB_BRD": "DIM"
+    "&kp C_VOL_UP": "$$vol_up$$"
+    "&kp C_VOL_DN": "$$vol_down$$"
+    "&kp C_MUTE": "$$mute$$"
+    "&kp C_PP": "$$play$$"
+    "&kp C_PREV": "$$prev$$"
+    "&kp C_NEXT": "$$next$$"
+    "&kp K_COPY": "$$copy$$"
+    "&kp K_PASTE": "$$paste$$"
+    "&kp HOME": "$$home$$"
+    "&kp UP": "$$arrow_up$$"
+    "&kp DOWN": "$$arrow_down$$"
+    "&kp LEFT": "$$arrow_left$$"
+    "&kp RIGHT": "$$arrow_right$$"
 
 draw_config:
-  # Overall layout configuration
+  # Modern layout configuration for crisp, clean look
   key_rx: 6.0
   key_ry: 6.0
-  key_w: 60.0
-  key_h: 56.0
+  key_w: 64.0
+  key_h: 64.0
   
-  # Font configuration
-  key_font_size: 12
-  combo_font_size: 11
-  inner_pad_w: 4.0
+  # Typography - cleaner fonts and better spacing
+  key_font_size: 14
+  combo_font_size: 12
+  inner_pad_w: 6.0
   inner_pad_h: 8.0
+  outer_pad_w: 30.0
+  outer_pad_h: 20.0
   
-  # Color theme - You can customize these colors
+  # Modern color theme - inspired by latest keymap-drawer examples
   svg_style: |
-    /* Custom CSS styles */
+    /* Modern keymap-drawer style with light theme */
     .keycap {
-      fill: #f8f9fa;
-      stroke: #dee2e6;
-      stroke-width: 1;
+      fill: #ffffff;
+      stroke: #e1e5e9;
+      stroke-width: 1.5;
+      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
     }
     .keycap.held {
-      fill: #e3f2fd;
+      fill: #f0f9ff;
+      stroke: #0ea5e9;
+      stroke-width: 2;
     }
     .keycap.ghost {
-      stroke-dasharray: 3, 3;
-      fill: #f5f5f5;
+      stroke-dasharray: 4, 4;
+      fill: #f8fafc;
+      stroke: #cbd5e1;
     }
     .held {
-      fill: #64b5f6;
+      fill: #0ea5e9;
     }
     .combo {
-      fill: #ffecb3;
-      stroke: #ff8a65;
-      stroke-width: 1;
+      fill: #fef3c7;
+      stroke: #f59e0b;
+      stroke-width: 1.5;
+      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
     }
     .keycode {
-      fill: #37474f;
-      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      fill: #1e293b;
+      font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 500;
     }
     .shifted {
-      fill: #6c757d;
-      font-size: 11px;
+      fill: #64748b;
+      font-size: 12px;
+      font-weight: 400;
     }
     .hold {
-      fill: #495057;
-      font-size: 11px;
+      fill: #475569;
+      font-size: 12px;
+      font-weight: 400;
+    }
+    .combo.combo_text {
+      fill: #92400e;
+      font-weight: 600;
+    }
+    /* Layer styling */
+    text.layer_text {
+      fill: #334155;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    /* Background styling */
+    rect.background {
+      fill: #fefefe;
     }
 
-  # SVG icon configuration - More useful icons
+  # SVG icon configuration - Modern icon set with consistent styling
+  glyph_tap_size: 18
+  glyph_hold_size: 16
+  glyph_shifted_size: 14
+  
   glyphs:
-    # Audio control icons
+    # Audio control icons - Material Design style
     vol_up: |
       <svg viewBox="0 0 24 24">
-        <path fill="currentColor" d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.85 14,18.71V20.77C18.01,19.86 21,16.28 21,12C21,7.72 18.01,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z"/>
+        <path fill="#1e293b" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
       </svg>
     vol_down: |
       <svg viewBox="0 0 24 24">
-        <path fill="currentColor" d="M5,9V15H9L14,20V4L9,9M18.5,12C18.5,10.23 17.5,8.71 16,7.97V16C17.5,15.29 18.5,13.76 18.5,12Z"/>
+        <path fill="#1e293b" d="M18.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM5 9v6h4l5 5V4L9 9H5z"/>
       </svg>
     mute: |
       <svg viewBox="0 0 24 24">
-        <path fill="currentColor" d="M12,4L9.91,6.09L12,8.18M4.27,3L3,4.27L7.73,9H3V15H7L12,20V13.27L16.25,17.53C15.58,18.04 14.83,18.46 14,18.7V20.77C15.38,20.45 16.63,19.82 17.68,18.96L19.73,21L21,19.73L12,10.73M19,12C19,12.94 18.8,13.82 18.46,14.64L19.97,16.15C20.62,14.91 21,13.5 21,12C21,7.72 18,4.14 14,3.23V5.29C16.89,6.15 19,8.83 19,12M16.5,12C16.5,10.23 15.5,8.71 14,7.97V10.18L16.45,12.63C16.5,12.43 16.5,12.21 16.5,12Z"/>
+        <path fill="#dc2626" d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27L7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.32 2.63-.95 3.68-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
       </svg>
     
-    # Media control icons
+    # Media control icons - Modern filled style
     play: |
       <svg viewBox="0 0 24 24">
-        <path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z"/>
+        <path fill="#059669" d="M8 5v14l11-7z"/>
       </svg>
     pause: |
       <svg viewBox="0 0 24 24">
-        <path fill="currentColor" d="M14,19H18V5H14M6,19H10V5H6V19Z"/>
+        <path fill="#d97706" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
       </svg>
     next: |
       <svg viewBox="0 0 24 24">
-        <path fill="currentColor" d="M16,18H18V6H16M6,18L14.5,12L6,6V18Z"/>
+        <path fill="#1e293b" d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
       </svg>
     prev: |
       <svg viewBox="0 0 24 24">
-        <path fill="currentColor" d="M6,18V6H8V18H6M9.5,12L18,6V18L9.5,12Z"/>
+        <path fill="#1e293b" d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
       </svg>
     
-    # System control icons
+    # System control icons - Refined design
     bluetooth: |
       <svg viewBox="0 0 24 24">
-        <path fill="currentColor" d="M17.71,7.71L12,2H11V9.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L11,14.41V22H12L17.71,16.29L13.41,12L17.71,7.71M13,5.83L15.17,8L13,10.17V5.83M13,13.83L15.17,16L13,18.17V13.83Z"/>
+        <path fill="#2563eb" d="M17.71 7.71L12 2h-1v7.59L6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 11 14.41V22h1l5.71-5.71L13.41 12l4.3-4.29zM13 5.83l1.88 1.88L13 9.59V5.83zm0 8.34l1.88 1.88L13 18.17v-3.76z"/>
       </svg>
     wifi: |
       <svg viewBox="0 0 24 24">
-        <path fill="currentColor" d="M12,21L15.6,16.2C14.6,15.45 13.35,15 12,15C10.65,15 9.4,15.45 8.4,16.2L12,21M12,9C9.3,9 6.81,9.89 4.8,11.4L6.6,13.8C8.1,12.67 9.97,12 12,12C14.03,12 15.9,12.67 17.4,13.8L19.2,11.4C17.19,9.89 14.7,9 12,9M12,3C7.95,3 4.21,4.34 1.2,6.6L3,9C5.5,7.12 8.62,6 12,6C15.38,6 18.5,7.12 21,9L22.8,6.6C19.79,4.34 16.05,3 12,3Z"/>
+        <path fill="#059669" d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.07 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/>
       </svg>
     
-    # Direction and navigation icons
+    # Direction arrows - Minimalist style
     arrow_up: |
       <svg viewBox="0 0 24 24">
-        <path fill="currentColor" d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z"/>
+        <path fill="#374151" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
       </svg>
     arrow_down: |
       <svg viewBox="0 0 24 24">
-        <path fill="currentColor" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/>
+        <path fill="#374151" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/>
       </svg>
     arrow_left: |
       <svg viewBox="0 0 24 24">
-        <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"/>
+        <path fill="#374151" d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/>
       </svg>
     arrow_right: |
       <svg viewBox="0 0 24 24">
-        <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+        <path fill="#374151" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
       </svg>
     
-    # Editing and function icons
+    # Editing icons - Professional style
     copy: |
       <svg viewBox="0 0 24 24">
-        <path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/>
+        <path fill="#6366f1" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
       </svg>
     paste: |
       <svg viewBox="0 0 24 24">
-        <path fill="currentColor" d="M19,20H5V4H7V7H17V4H19M12,2A1,1 0 0,1 13,3A1,1 0 0,1 12,4A1,1 0 0,1 11,3A1,1 0 0,1 12,2M19,2H14.82C14.4,0.84 13.3,0 12,0C10.7,0 9.6,0.84 9.18,2H5A2,2 0 0,0 3,4V20A2,2 0 0,0 5,22H19A2,2 0 0,0 21,20V4A2,2 0 0,0 19,2Z"/>
+        <path fill="#8b5cf6" d="M19 2h-4.18C14.4.84 13.3 0 12 0c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm7 18H5V4h2v3h10V4h2v16z"/>
       </svg>
     
-    # RGB and backlight icons
+    # RGB and effects - Colorful modern icons
     rgb: |
       <svg viewBox="0 0 24 24">
-        <path fill="currentColor" d="M12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12C22,6.48 17.52,2 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16Z"/>
+        <circle cx="12" cy="12" r="10" fill="none" stroke="url(#rainbow)" stroke-width="3"/>
+        <defs>
+          <linearGradient id="rainbow" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#ef4444"/>
+            <stop offset="33%" style="stop-color:#10b981"/>
+            <stop offset="66%" style="stop-color:#3b82f6"/>
+            <stop offset="100%" style="stop-color:#8b5cf6"/>
+          </linearGradient>
+        </defs>
       </svg>
     brightness: |
       <svg viewBox="0 0 24 24">
-        <path fill="currentColor" d="M12,18C8.69,18 6,15.31 6,12C6,8.69 8.69,6 12,6C15.31,6 18,8.69 18,12C18,15.31 15.31,18 12,18M12,2A1,1 0 0,0 11,3V5A1,1 0 0,0 12,6A1,1 0 0,0 13,5V3A1,1 0 0,0 12,2M5.64,4.64A1,1 0 0,0 4.93,4.93A1,1 0 0,0 4.22,5.64L5.64,7.05A1,1 0 0,0 6.34,7.76A1,1 0 0,0 7.05,7.05A1,1 0 0,0 7.05,6.34L5.64,4.64M3,11A1,1 0 0,0 2,12A1,1 0 0,0 3,13H5A1,1 0 0,0 6,12A1,1 0 0,0 5,11H3M5.64,18.36A1,1 0 0,0 6.34,19.07A1,1 0 0,0 7.05,18.36L8.46,16.95A1,1 0 0,0 8.46,16.24A1,1 0 0,0 7.76,15.54A1,1 0 0,0 7.05,15.54L5.64,16.95A1,1 0 0,0 5.64,18.36Z"/>
+        <path fill="#f59e0b" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+      </svg>
+    
+    # Additional modern icons
+    home: |
+      <svg viewBox="0 0 24 24">
+        <path fill="#0ea5e9" d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+      </svg>
+    settings: |
+      <svg viewBox="0 0 24 24">
+        <path fill="#64748b" d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/>
       </svg>
