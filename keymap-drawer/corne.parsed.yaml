@@ -47,42 +47,42 @@ layers:
   - ''
   - Q
   - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
+  - F
   - P
+  - B
+  - J
+  - L
+  - U
+  - Y
+  - ''''
   - ''
   - ''
   - {t: A, h: LGUI}
-  - {t: S, h: LALT}
-  - {t: D, h: LCTRL}
-  - {t: F, h: LSHFT}
+  - {t: R, h: LALT}
+  - {t: S, h: LCTRL}
+  - {t: T, h: LSHFT}
   - G
-  - H
-  - {t: J, h: LSHFT}
-  - {t: K, h: LCTRL}
-  - {t: L, h: LALT}
-  - {t: '''', h: LGUI}
+  - M
+  - {t: N, h: LSHFT}
+  - {t: E, h: LCTRL}
+  - {t: I, h: LALT}
+  - {t: O, h: LGUI}
   - ''
   - ''
   - {t: Z, h: Button}
   - {t: X, h: RALT}
   - C
+  - D
   - V
-  - B
-  - N
-  - M
+  - K
+  - H
   - ','
   - {t: ., h: RALT}
   - {t: /, h: Button}
   - ''
   - {t: ESC, h: Media}
-  - {t: TAB, h: Nav}
-  - {t: SPACE, h: Mouse}
+  - {t: SPACE, h: Nav}
+  - {t: TAB, h: Mouse}
   - {t: RET, h: Sym}
   - {t: BSPC, h: Num}
   - {t: DEL, h: Fun}
