@@ -132,7 +132,7 @@ layers:
   - '&mkp MB3'
   Nav:
   - ''
-  - '&bootloader'
+  - Boot
   - '&u_to_U_TAP'
   - '&u_to_U_EXTRA'
   - '&u_to_U_BASE'
@@ -175,7 +175,7 @@ layers:
   - DEL
   Mouse:
   - ''
-  - '&bootloader'
+  - Boot
   - '&u_to_U_TAP'
   - '&u_to_U_EXTRA'
   - '&u_to_U_BASE'
@@ -218,7 +218,7 @@ layers:
   - '&mkp MB3'
   Media:
   - ''
-  - '&bootloader'
+  - Boot
   - '&u_to_U_TAP'
   - '&u_to_U_EXTRA'
   - '&u_to_U_BASE'
@@ -227,7 +227,7 @@ layers:
   - RGB HUI
   - RGB SAI
   - RGB BRI
-  - RGB TOG
+  - RGB Tog
   - ''
   - ''
   - LGUI
@@ -239,7 +239,7 @@ layers:
   - VOL DN
   - VOL UP
   - NEXT
-  - EP TOG
+  - EP Tog
   - ''
   - ''
   - ''
@@ -247,11 +247,11 @@ layers:
   - '&u_to_U_FUN'
   - '&u_to_U_MEDIA'
   - ''
-  - {t: BT, h: '0', s: '&u_macro_u_bt_sel_0'}
-  - {t: BT, h: '1', s: '&u_macro_u_bt_sel_1'}
-  - {t: BT, h: '2', s: '&u_macro_u_bt_sel_2'}
-  - {t: BT, h: '3', s: '&u_macro_u_bt_sel_3'}
-  - {t: OUT TOG, s: OUT USB}
+  - {t: BT 0, s: '&u_macro_u_bt_sel_0'}
+  - {t: BT 1, s: '&u_macro_u_bt_sel_1'}
+  - {t: BT 2, s: '&u_macro_u_bt_sel_2'}
+  - {t: BT 3, s: '&u_macro_u_bt_sel_3'}
+  - {t: Out Tog, s: Out USB}
   - ''
   - {type: held}
   - ''
@@ -270,7 +270,7 @@ layers:
   - '&u_to_U_BASE'
   - '&u_to_U_EXTRA'
   - '&u_to_U_TAP'
-  - '&bootloader'
+  - Boot
   - ''
   - ''
   - ;
@@ -313,7 +313,7 @@ layers:
   - '&u_to_U_BASE'
   - '&u_to_U_EXTRA'
   - '&u_to_U_TAP'
-  - '&bootloader'
+  - Boot
   - ''
   - ''
   - ':'
@@ -356,7 +356,7 @@ layers:
   - '&u_to_U_BASE'
   - '&u_to_U_EXTRA'
   - '&u_to_U_TAP'
-  - '&bootloader'
+  - Boot
   - ''
   - ''
   - F11
