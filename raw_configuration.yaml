@@ -39,7 +39,12 @@ draw_config:
 parse_config:
   preprocess: true
   skip_binding_parsing: false
-  raw_binding_map: {}
+  raw_binding_map:
+    "&kp LS(DEL)": "Cut"
+    "&kp LC(INS)": "Copy"
+    "&kp LS(INS)": "Paste"
+    "&kp K_UNDO": "Undo"
+    "&kp K_AGAIN": "Again"
   sticky_label: sticky
   toggle_label: toggle
   tap_toggle_label: tap-toggle

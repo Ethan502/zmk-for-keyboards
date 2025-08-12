@@ -10,6 +10,11 @@ parse_config:
     "&bt BT_SEL 3": "BT 3"
     "&bt BT_SEL 4": "BT 4"
     "&rgb_ug RGB_TOG": "RGB"
+    "&kp LS(DEL)": "Cut"
+    "&kp LC(INS)": "Copy"
+    "&kp LS(INS)": "Paste"
+    "&kp K_UNDO": "Undo"
+    "&kp K_AGAIN": "Again"
 
 draw_config:
   key_rx: 6.0
