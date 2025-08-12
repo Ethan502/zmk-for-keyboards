@@ -124,12 +124,12 @@ layers:
   - Cut
   - Undo
   - ''
-  - '&mkp MB3'
-  - '&mkp MB1'
-  - '&mkp MB2'
-  - '&mkp MB2'
-  - '&mkp MB1'
-  - '&mkp MB3'
+  - Middle Button
+  - Left Button
+  - Right Button
+  - Right Button
+  - Left Button
+  - Middle Button
   Nav:
   - ''
   - Boot
@@ -153,7 +153,7 @@ layers:
   - DOWN
   - UP
   - RIGHT
-  - {t: '&caps_word', s: CAPS}
+  - {t: Cps Wrd, s: CAPS}
   - ''
   - ''
   - ''
@@ -213,9 +213,9 @@ layers:
   - ''
   - ''
   - {type: held}
-  - '&mkp MB2'
-  - '&mkp MB1'
-  - '&mkp MB3'
+  - Right Button
+  - Left Button
+  - Middle Button
   Media:
   - ''
   - Boot
