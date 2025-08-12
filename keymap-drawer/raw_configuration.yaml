@@ -45,13 +45,50 @@ parse_config:
     "&kp LS(INS)": "Paste"
     "&kp K_UNDO": "Undo"
     "&kp K_AGAIN": "Again"
+    "&bootloader": "Boot"
+    "&sys_reset": "Reset"
+    "&to U_BASE": "To Base"
+    "&to U_EXTRA": "To Extra" 
+    "&to U_TAP": "To Tap"
+    "&to U_BUTTON": "To Button"
+    "&to U_NAV": "To Nav"
+    "&to U_MOUSE": "To Mouse"
+    "&to U_MEDIA": "To Media"
+    "&to U_NUM": "To Num"
+    "&to U_SYM": "To Sym"
+    "&to U_FUN": "To Fun"
+    "&bt BT_CLR": "BT Clr"
+    "&bt BT_SEL 0": "BT 0"
+    "&bt BT_SEL 1": "BT 1"
+    "&bt BT_SEL 2": "BT 2"
+    "&bt BT_SEL 3": "BT 3"
+    "&bt BT_SEL 4": "BT 4"
+    "&out OUT_USB": "Out USB"
+    "&out OUT_BLE": "Out BLE"
+    "&out OUT_TOG": "Out Tog"
+    "&rgb_ug RGB_TOG": "RGB Tog"
+    "&rgb_ug RGB_ON": "RGB On"
+    "&rgb_ug RGB_OFF": "RGB Off"
+    "&ext_power EP_ON": "EP On"
+    "&ext_power EP_OFF": "EP Off"
+    "&ext_power EP_TOG": "EP Tog"
   sticky_label: sticky
   toggle_label: toggle
   tap_toggle_label: tap-toggle
   trans_legend:
     t: ▽
     type: trans
-  layer_legend_map: {}
+  layer_legend_map:
+    U_BASE: "Base"
+    U_EXTRA: "Extra"
+    U_TAP: "Tap"
+    U_BUTTON: "Button"
+    U_NAV: "Nav"
+    U_MOUSE: "Mouse"
+    U_MEDIA: "Media"
+    U_NUM: "Num"
+    U_SYM: "Sym"
+    U_FUN: "Fun"
   mark_alternate_layer_activators: false
   modifier_fn_map:
     left_ctrl: Ctl
