@@ -26,7 +26,7 @@ jobs:
         
     - name: Generate 1-Column Layout (Default)
       run: |
-        keymap -c keymap_drawer.config.yaml draw keymap-drawer/corne.yaml -o keymap-drawer/corne_raw_config.svg
+        keymap -c raw_configuration.yaml draw keymap-drawer/corne.yaml -o keymap-drawer/corne_raw_config.svg
         
     - name: Generate 2-Column Layout (Compact)
       run: |
@@ -62,7 +62,7 @@ jobs:
             output_path = f'keymap-drawer/layers/{layer_name.lower()}.svg'
             cmd = [
                 'keymap', 
-                '-c', 'keymap_drawer.config.yaml', 
+                '-c', 'raw_configuration.yaml', 
                 'draw', 'keymap-drawer/corne.yaml', 
                 '-o', output_path,
                 '-s', layer_name

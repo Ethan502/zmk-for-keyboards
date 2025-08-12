@@ -9,6 +9,7 @@ on:
   push:
     paths:
       - "config/**"
+      - "keymap-drawer/corne.yaml"
 
 jobs:
   build:
