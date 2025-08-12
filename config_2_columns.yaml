@@ -16,3 +16,4 @@ draw_config:
   key_ry: 6.0
   key_w: 60.0
   key_h: 60.0
+  n_columns: 2  # 2-column layout for reduced height

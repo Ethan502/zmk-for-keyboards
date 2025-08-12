@@ -1,391 +1,63 @@
-layout: {zmk_keyboard: corne}
+# Corne keymap styled to match keymap-drawer showcase examples
+# 42-key Corne layout with outer columns empty (like miryoku)
+# Allows others to add functions to outer keys as needed
+layout:
+  qmk_keyboard: corne_rotated
 layers:
   Base:
-  - Q
-  - W
-  - E
-  - R
-  - T
-  - ''
-  - ''
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - {t: A, h: LGUI}
-  - {t: S, h: LALT}
-  - {t: D, h: LCTRL}
-  - {t: F, h: LSHFT}
-  - G
-  - ''
-  - ''
-  - H
-  - {t: J, h: LSHFT}
-  - {t: K, h: LCTRL}
-  - {t: L, h: LALT}
-  - {t: '''', h: LGUI}
-  - {t: Z, h: Button}
-  - {t: X, h: RALT}
-  - C
-  - V
-  - B
-  - ''
-  - ''
-  - N
-  - M
-  - ','
-  - {t: ., h: RALT}
-  - {t: /, h: Button}
-  - {t: '$$mdi:keyboard-esc$$', h: Media}
-  - {t: '$$mdi:keyboard-tab$$', h: Nav}
-  - {t: '$$mdi:keyboard-space$$', h: Mouse}
-  - {t: RET, h: Sym}
-  - {t: '$$mdi:backspace-outline$$', h: Num}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: Fun}
+  - ['', Q, W, F, P, B, J, L, U, Y, "'", '']
+  - ['', {t: A, h: Meta}, {t: R, h: Alt}, {t: S, h: Control}, {t: T, h: Shift}, G, M, {t: N, h: Shift}, {t: E, h: Control}, {t: I, h: Alt}, {t: O, h: Meta}, '']
+  - ['', {t: Z, h: Button}, {t: X, h: AltGr}, C, D, V, K, H, {t: ',', s: '<'}, {t: ., h: AltGr, s: '>'}, {t: /, h: Button, s: '?'}, '']
+  - [{t: $$mdi:keyboard-esc$$, h: Media}, {t: $$mdi:keyboard-space$$, h: Nav}, {t: $$mdi:keyboard-tab$$, h: Mouse}, {t: $$mdi:keyboard-return$$, h: Sym}, {t: $$mdi:backspace-outline$$, h: Num}, {t: $$mdi:backspace-reverse-outline$$, h: Fun}]
   Extra:
-  - Q
-  - W
-  - E
-  - R
-  - T
-  - ''
-  - ''
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - {t: A, h: LGUI}
-  - {t: S, h: LALT}
-  - {t: D, h: LCTRL}
-  - {t: F, h: LSHFT}
-  - G
-  - ''
-  - ''
-  - H
-  - {t: J, h: LSHFT}
-  - {t: K, h: LCTRL}
-  - {t: L, h: LALT}
-  - {t: '''', h: LGUI}
-  - {t: Z, h: Button}
-  - {t: X, h: RALT}
-  - C
-  - V
-  - B
-  - ''
-  - ''
-  - N
-  - M
-  - ','
-  - {t: ., h: RALT}
-  - {t: /, h: Button}
-  - {t: '$$mdi:keyboard-esc$$', h: Media}
-  - {t: '$$mdi:keyboard-tab$$', h: Nav}
-  - {t: '$$mdi:keyboard-space$$', h: Mouse}
-  - {t: RET, h: Sym}
-  - {t: '$$mdi:backspace-outline$$', h: Num}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: Fun}
-  Tap: [Q, W, E, R, T, '', '', Y, U, I, O, P, A, S, D, F, G, '', '', H, J, K, L, '''', Z, X, C, V, B, '', '', N, M, ',', ., /, '$$mdi:keyboard-esc$$', '$$mdi:keyboard-space$$',
-    '$$mdi:keyboard-tab$$', RET, '$$mdi:backspace-outline$$', '$$mdi:backspace-reverse-outline$$']
+  - ['', Q, W, E, R, T, Y, U, I, O, P, '']
+  - ['', {t: A, h: Meta}, {t: S, h: Alt}, {t: D, h: Control}, {t: F, h: Shift}, G, H, {t: J, h: Shift}, {t: K, h: Control}, {t: L, h: Alt}, {t: "'", h: Meta}, '']
+  - ['', {t: Z, h: Button}, {t: X, h: AltGr}, C, V, B, N, M, ',', {t: ., h: AltGr}, {t: /, h: Button}, '']
+  - [{t: $$mdi:keyboard-esc$$, h: Media}, {t: $$mdi:keyboard-space$$, h: Nav}, {t: $$mdi:keyboard-tab$$, h: Mouse}, {t: $$mdi:keyboard-return$$, h: Sym}, {t: $$mdi:backspace-outline$$, h: Num}, {t: $$mdi:backspace-reverse-outline$$, h: Fun}]
+  Tap:
+  - ['', Q, W, F, P, B, J, L, U, Y, "'", '']
+  - ['', A, R, S, T, G, M, N, E, I, O, '']
+  - ['', Z, X, C, D, V, K, H, ',', ., /, '']
+  - [$$mdi:keyboard-esc$$, $$mdi:keyboard-space$$, $$mdi:keyboard-tab$$, $$mdi:keyboard-return$$, $$mdi:backspace-outline$$, $$mdi:backspace-reverse-outline$$]
   Button:
-  - UNDO
-  - Sft+DEL
-  - Ctl+INS
-  - Sft+INS
-  - AGAIN
-  - ''
-  - ''
-  - AGAIN
-  - Sft+INS
-  - Ctl+INS
-  - Sft+DEL
-  - UNDO
-  - LGUI
-  - LALT
-  - LCTRL
-  - LSHFT
-  - ''
-  - ''
-  - ''
-  - ''
-  - LSHFT
-  - LCTRL
-  - LALT
-  - LGUI
-  - {t: UNDO, type: held}
-  - Sft+DEL
-  - Ctl+INS
-  - Sft+INS
-  - AGAIN
-  - ''
-  - ''
-  - AGAIN
-  - Sft+INS
-  - Ctl+INS
-  - Sft+DEL
-  - UNDO
-  - '&mkp MB3'
-  - '&mkp MB1'
-  - '&mkp MB2'
-  - '&mkp MB2'
-  - '&mkp MB1'
-  - '&mkp MB3'
+  - ['', Undo, Cut, Copy, Paste, Again, Again, Paste, Copy, Cut, Undo, '']
+  - ['', Meta, Alt, Control, Shift, '', '', Shift, Control, Alt, Meta, '']
+  - ['', {t: Undo, type: held}, Cut, Copy, Paste, Again, Again, Paste, Copy, Cut, {t: Undo, type: held}, '']
+  - [Middle Button, Left Button, Right Button, Right Button, Left Button, Middle Button]
   Nav:
-  - $$mdi:restart$$
-  - '&u_to_U_TAP'
-  - '&u_to_U_EXTRA'
-  - '&u_to_U_BASE'
-  - ''
-  - ''
-  - ''
-  - AGAIN
-  - Sft+INS
-  - Ctl+INS
-  - Sft+DEL
-  - UNDO
-  - LGUI
-  - LALT
-  - LCTRL
-  - LSHFT
-  - ''
-  - ''
-  - ''
-  - $$mdi:arrow-left$$
-  - $$mdi:arrow-down$$
-  - $$mdi:arrow-up$$
-  - $$mdi:arrow-right$$
-  - {t: '&caps_word', s: CAPS}
-  - ''
-  - RALT
-  - '&u_to_U_NUM'
-  - '&u_to_U_NAV'
-  - ''
-  - ''
-  - ''
-  - $$mdi:home$$
-  - PG DN
-  - PG UP
-  - END
-  - INS
-  - ''
-  - {type: held}
-  - ''
-  - RET
-  - $$mdi:backspace-outline$$
-  - $$mdi:backspace-reverse-outline$$
+  - ['', Boot, To Tap, To Extra, To Base, '', Again, Paste, Copy, Cut, Undo, '']
+  - ['', Meta, Alt, Control, Shift, '', {t: "Caps Word", s: "Caps Lock"}, Left, Down, Up, Right, '']
+  - ['', '', AltGr, To Num, To Nav, '', Ins, Home, Pg Dn, Pg Up, End, '']
+  - ['', {type: held}, '', $$mdi:keyboard-return$$, $$mdi:backspace-outline$$, $$mdi:backspace-reverse-outline$$]
   Mouse:
-  - $$mdi:restart$$
-  - '&u_to_U_TAP'
-  - '&u_to_U_EXTRA'
-  - '&u_to_U_BASE'
-  - ''
-  - ''
-  - ''
-  - AGAIN
-  - Sft+INS
-  - Ctl+INS
-  - Sft+DEL
-  - UNDO
-  - LGUI
-  - LALT
-  - LCTRL
-  - LSHFT
-  - ''
-  - ''
-  - ''
-  - KP 4
-  - KP 2
-  - KP 8
-  - KP 6
-  - ''
-  - ''
-  - RALT
-  - '&u_to_U_SYM'
-  - '&u_to_U_MOUSE'
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {type: held}
-  - '&mkp MB2'
-  - '&mkp MB1'
-  - '&mkp MB3'
+  - ['', Boot, To Tap, To Extra, To Base, '', Again, Paste, Copy, Cut, Undo, '']
+  - ['', Meta, Alt, Control, Shift, '', '', Mouse Left, Mouse Down, Mouse Up, Mouse Right, '']
+  - ['', '', AltGr, To Sym, To Mouse, '', '', '', '', '', '', '']
+  - ['', '', {type: held}, Right Button, Left Button, Middle Button]
   Media:
-  - $$mdi:restart$$
-  - '&u_to_U_TAP'
-  - '&u_to_U_EXTRA'
-  - '&u_to_U_BASE'
-  - ''
-  - ''
-  - ''
-  - $$mdi:auto-mode$$
-  - $$mdi:palette$$
-  - $$mdi:water-plus$$
-  - $$mdi:brightness-7$$
-  - $$mdi:led-strip-variant$$
-  - LGUI
-  - LALT
-  - LCTRL
-  - LSHFT
-  - ''
-  - ''
-  - ''
-  - $$mdi:skip-previous$$
-  - $$mdi:volume-minus$$
-  - $$mdi:volume-plus$$
-  - $$mdi:skip-next$$
-  - EP TOG
-  - ''
-  - RALT
-  - '&u_to_U_FUN'
-  - '&u_to_U_MEDIA'
-  - ''
-  - ''
-  - ''
-  - {t: '$$mdi:numeric-1-circle$$', s: '&u_macro_u_bt_sel_0'}
-  - {t: '$$mdi:numeric-2-circle$$', s: '&u_macro_u_bt_sel_1'}
-  - {t: '$$mdi:numeric-3-circle$$', s: '&u_macro_u_bt_sel_2'}
-  - {t: '$$mdi:numeric-4-circle$$', s: '&u_macro_u_bt_sel_3'}
-  - {t: OUT TOG, s: OUT USB}
-  - {type: held}
-  - ''
-  - ''
-  - STOP
-  - $$mdi:play-pause$$
-  - $$mdi:volume-off$$
+  - ['', Boot, To Tap, To Extra, To Base, '', {t: "RGB Tog", s: "RGB Off"}, {t: "RGB M+", s: "RGB M-"}, {t: "RGB H+", s: "RGB H-"}, {t: "RGB S+", s: "RGB S-"}, {t: "RGB V+", s: "RGB V-"}, '']
+  - ['', Meta, Alt, Control, Shift, '', {t: "EP Tog", s: "EP Off"}, Prev, Volume Down, Volume Up, Next, '']
+  - ['', '', AltGr, To Fun, To Media, '', {t: Out Tog, s: Out USB}, {t: "BT  0", s: "BT Clr 0"}, {t: "BT  1", s: "BT Clr 1"}, {t: "BT  2", s: "BT Clr 2"}, {t: "BT  3", s: "BT Clr 3"}, '']
+  - [{type: held}, '', '', Stop, Play Pause, Mute]
   Num:
-  - '['
-  - '7'
-  - '8'
-  - '9'
-  - ']'
-  - ''
-  - ''
-  - ''
-  - '&u_to_U_BASE'
-  - '&u_to_U_EXTRA'
-  - '&u_to_U_TAP'
-  - $$mdi:restart$$
-  - ;
-  - '4'
-  - '5'
-  - '6'
-  - '='
-  - ''
-  - ''
-  - ''
-  - LSHFT
-  - LCTRL
-  - LALT
-  - LGUI
-  - '`'
-  - '1'
-  - '2'
-  - '3'
-  - \
-  - ''
-  - ''
-  - ''
-  - '&u_to_U_NUM'
-  - '&u_to_U_NAV'
-  - RALT
-  - ''
-  - .
-  - '0'
-  - '-'
-  - ''
-  - {type: held}
-  - ''
+  - ['', {t: '[', s: '{'}, {t: '7', s: '&'}, {t: '8', s: '*'}, {t: '9', s: '('}, {t: ']', s: '}'}, '', To Base, To Extra, To Tap, Boot, '']
+  - ['', {t: ';', s: ':'}, {t: '4', s: '$'}, {t: '5', s: '%'}, {t: '6', s: '^'}, {t: '=', s: '+'}, '', Shift, Control, Alt, Meta, '']
+  - ['', {t: '`', s: '~'}, {t: '1', s: '!'}, {t: '2', s: '@'}, {t: '3', s: '#'}, {t: '\', s: '|'}, '', To Num, To Nav, AltGr, '', '']
+  - [{t: ., s: '>'}, {t: '0', s: ')'}, {t: '-', s: '_'}, '', {type: held}, '']
   Sym:
-  - '{'
-  - '&'
-  - '*'
-  - (
-  - '}'
-  - ''
-  - ''
-  - ''
-  - '&u_to_U_BASE'
-  - '&u_to_U_EXTRA'
-  - '&u_to_U_TAP'
-  - $$mdi:restart$$
-  - ':'
-  - $
-  - '%'
-  - ^
-  - +
-  - ''
-  - ''
-  - ''
-  - LSHFT
-  - LCTRL
-  - LALT
-  - LGUI
-  - '~'
-  - '!'
-  - '@'
-  - '#'
-  - '|'
-  - ''
-  - ''
-  - ''
-  - '&u_to_U_SYM'
-  - '&u_to_U_MOUSE'
-  - RALT
-  - ''
-  - (
-  - )
-  - _
-  - {type: held}
-  - ''
-  - ''
+  - ['', '{', '&', '*', '(', '}', '', To Base, To Extra, To Tap, Boot, '']
+  - ['', ':', '$', '%', '^', '+', '', Shift, Control, Alt, Meta, '']
+  - ['', '~', '!', '@', '#', '|', '', To Sym, To Mouse, AltGr, '', '']
+  - ['>', ')', '_', {type: held}, '', '']
   Fun:
-  - F12
-  - F7
-  - F8
-  - F9
-  - PSCRN
-  - ''
-  - ''
-  - ''
-  - '&u_to_U_BASE'
-  - '&u_to_U_EXTRA'
-  - '&u_to_U_TAP'
-  - $$mdi:restart$$
-  - F11
-  - F4
-  - F5
-  - F6
-  - SLCK
-  - ''
-  - ''
-  - ''
-  - LSHFT
-  - LCTRL
-  - LALT
-  - LGUI
-  - F10
-  - F1
-  - F2
-  - F3
-  - PAUSE BREAK
-  - ''
-  - ''
-  - ''
-  - '&u_to_U_FUN'
-  - '&u_to_U_MEDIA'
-  - RALT
-  - ''
-  - APP
-  - $$mdi:keyboard-space$$
-  - $$mdi:keyboard-tab$$
-  - ''
-  - ''
-  - {type: held}
+  - ['', F12, F7, F8, F9, PrtScn SysRq, '', To Base, To Extra, To Tap, Boot, '']
+  - ['', F11, F4, F5, F6, Scroll Lock, '', Shift, Control, Alt, Meta, '']
+  - ['', F10, F1, F2, F3, Pause Break, '', To Fun, To Media, AltGr, '', '']
+  - [Menu, App, Space, {type: held}, '', '']
+combos:
+  - {p: [1, 2], k: Tab, l: [Base]}
+  - {p: [2, 3], k: {t: "Caps Word", s: "Caps Lock"}, l: [Base]}
+  - {p: [3, 4], k: Esc, l: [Base]}
+  - {p: [7, 8], k: $$mdi:keyboard-return$$, l: [Base]}
+  - {p: [8, 9], k: $$mdi:backspace-outline$$, l: [Base]}
+  - {p: [9, 10], k: $$mdi:backspace-reverse-outline$$, l: [Base]}

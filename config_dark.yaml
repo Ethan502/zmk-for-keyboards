@@ -16,3 +16,23 @@ draw_config:
   key_ry: 6.0
   key_w: 60.0
   key_h: 60.0
+  # Dark theme configuration
+  dark_mode: true
+  svg_extra_style: |
+    .key {
+      fill: #2d2d2d;
+      stroke: #555555;
+      stroke-width: 1;
+    }
+    .key.held {
+      fill: #404040;
+      stroke: #777777;
+    }
+    text.key {
+      fill: #ffffff;
+      font-weight: bold;
+    }
+    text.held {
+      fill: #cccccc;
+      font-weight: bold;
+    }
