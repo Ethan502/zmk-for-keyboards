@@ -32,74 +32,84 @@ jobs:
       run: |
         echo "Attempting to parse keymap (ZMK -> YAML)"
         set +e
-        keymap -c raw_configuration.yaml parse -z config/corne.keymap > keymap-drawer/corne.yaml
+        keymap -c raw_configuration.yaml parse -z config/corne.keymap > keymap-drawer/corne.parsed.yaml
         status=$?
         set -e
         if [ $status -ne 0 ]; then
-          echo "Parse failed (likely tree-sitter/macro expansion). Keeping existing keymap-drawer/corne.yaml."
+          echo "Parse failed (likely tree-sitter/macro expansion). Will draw using keymap-drawer/corne.yaml."
         else
-          echo "Parse successful."
+          echo "Parse successful. Will draw using keymap-drawer/corne.parsed.yaml."
         fi
         
     - name: Generate 1-Column Layout
       run: |
-        keymap -c config_1_column.yaml draw keymap-drawer/corne.yaml -o keymap-drawer/corne_1_column.svg
+        INPUT_YAML=keymap-drawer/corne.yaml
+        if [ -f keymap-drawer/corne.parsed.yaml ]; then INPUT_YAML=keymap-drawer/corne.parsed.yaml; fi
+        keymap -c config_1_column.yaml draw "$INPUT_YAML" -o keymap-drawer/corne_1_column.svg
         
     - name: Generate 2-Column Layout (Compact)
       run: |
-        keymap -c config_2_columns.yaml draw keymap-drawer/corne.yaml -o keymap-drawer/corne_2_columns.svg
+        INPUT_YAML=keymap-drawer/corne.yaml
+        if [ -f keymap-drawer/corne.parsed.yaml ]; then INPUT_YAML=keymap-drawer/corne.parsed.yaml; fi
+        keymap -c config_2_columns.yaml draw "$INPUT_YAML" -o keymap-drawer/corne_2_columns.svg
         
     - name: Generate 3-Column Layout (Very Compact)
       run: |
-        keymap -c config_3_columns.yaml draw keymap-drawer/corne.yaml -o keymap-drawer/corne_3_columns.svg
+        INPUT_YAML=keymap-drawer/corne.yaml
+        if [ -f keymap-drawer/corne.parsed.yaml ]; then INPUT_YAML=keymap-drawer/corne.parsed.yaml; fi
+        keymap -c config_3_columns.yaml draw "$INPUT_YAML" -o keymap-drawer/corne_3_columns.svg
         
     - name: Generate Dark Theme
       run: |
-        keymap -c config_dark.yaml draw keymap-drawer/corne.yaml -o keymap-drawer/corne_dark.svg
+        INPUT_YAML=keymap-drawer/corne.yaml
+        if [ -f keymap-drawer/corne.parsed.yaml ]; then INPUT_YAML=keymap-drawer/corne.parsed.yaml; fi
+        keymap -c config_dark.yaml draw "$INPUT_YAML" -o keymap-drawer/corne_dark.svg
         
     - name: Generate Raw Configuration Layout
       run: |
-        keymap -c raw_configuration.yaml draw keymap-drawer/corne.yaml -o keymap-drawer/corne_raw_config.svg
+        INPUT_YAML=keymap-drawer/corne.yaml
+        if [ -f keymap-drawer/corne.parsed.yaml ]; then INPUT_YAML=keymap-drawer/corne.parsed.yaml; fi
+        keymap -c raw_configuration.yaml draw "$INPUT_YAML" -o keymap-drawer/corne_raw_config.svg
         
     - name: Create layer generation script
       run: |
         cat > generate_layers.py << 'EOF'
-        import yaml
-        import subprocess
-        import os
+    import yaml
+    import subprocess
+    import os
         
-        # Create layers directory
-        os.makedirs('keymap-drawer/layers', exist_ok=True)
+    # Create layers directory
+    os.makedirs('keymap-drawer/layers', exist_ok=True)
         
-        # Read keymap file to get layer names
-        with open('keymap-drawer/corne.yaml', 'r') as f:
-            data = yaml.safe_load(f)
-            layers = data.get('layers', {})
+    # Read keymap file to get layer names
+    with open('keymap-drawer/corne.yaml', 'r') as f:
+      data = yaml.safe_load(f)
+      layers = data.get('layers', {})
             
-        print(f'Found {len(layers)} layers: {list(layers.keys())}')
+    print(f'Found {len(layers)} layers: {list(layers.keys())}')
         
-        # Generate SVG for each layer using raw_configuration.yaml without combos
-        for layer_name in layers.keys():
-            output_path = f'keymap-drawer/layers/{layer_name.lower()}.svg'
-            cmd = [
-                'keymap', 
-                '-c', 'raw_configuration.yaml', 
-                'draw', 'keymap-drawer/corne.yaml', 
-                '-o', output_path,
-                '-s', layer_name,
-                '--keys-only'
-            ]
-            print(f'Generating {layer_name} -> {output_path}')
-            try:
-                result = subprocess.run(cmd, check=True, capture_output=True, text=True)
-                print(f'✅ Successfully generated {layer_name}')
-            except subprocess.CalledProcessError as e:
-                print(f'❌ Error generating {layer_name}: {e}')
-                print(f'Command output: {e.stdout}')
-                print(f'Command error: {e.stderr}')
-                raise
+    # Generate SVG for each layer using raw_configuration.yaml without combos
+    for layer_name in layers.keys():
+      output_path = f'keymap-drawer/layers/{layer_name.lower()}.svg'
+      cmd = [
+        'keymap', 
+        '-c', 'raw_configuration.yaml', 
+        'draw', 'keymap-drawer/corne.yaml', 
+        '-o', output_path,
+        '-s', layer_name,
+        '--keys-only'
+      ]
+      print(f'Generating {layer_name} -> {output_path}')
+      try:
+        result = subprocess.run(cmd, check=True, capture_output=True, text=True)
+        print(f'✅ Successfully generated {layer_name}')
+      except subprocess.CalledProcessError as e:
+        print(f'❌ Error generating {layer_name}: {e}')
+        print(f'Command output: {e.stdout}')
+        print(f'Command error: {e.stderr}')
+        raise
                 
-        print('All layer diagrams generated successfully!')
+    print('All layer diagrams generated successfully!')
         EOF
         
     - name: Generate Individual Layer Diagrams
@@ -108,14 +118,16 @@ jobs:
         
     - name: Generate Combos Diagram
       run: |
-        keymap -c raw_configuration.yaml draw keymap-drawer/corne.yaml -o keymap-drawer/corne_combos.svg --combos-only
+        INPUT_YAML=keymap-drawer/corne.yaml
+        if [ -f keymap-drawer/corne.parsed.yaml ]; then INPUT_YAML=keymap-drawer/corne.parsed.yaml; fi
+        keymap -c raw_configuration.yaml draw "$INPUT_YAML" -o keymap-drawer/corne_combos.svg --combos-only
         
     - name: Commit generated files
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         mkdir -p keymap-drawer/layers
-        git add keymap-drawer/*.svg keymap-drawer/layers/*.svg
+        git add keymap-drawer/*.svg keymap-drawer/layers/*.svg keymap-drawer/*.yaml
         git diff --staged --quiet || git commit -m "Auto-update keymap diagrams [skip ci]"
         
     - name: Push changes
