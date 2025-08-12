@@ -133,9 +133,9 @@ layers:
   Nav:
   - ''
   - Boot
-  - '&u_to_U_TAP'
-  - '&u_to_U_EXTRA'
-  - '&u_to_U_BASE'
+  - To Tap
+  - To Extra
+  - To Base
   - ''
   - Again
   - Paste
@@ -158,8 +158,8 @@ layers:
   - ''
   - ''
   - RALT
-  - '&u_to_U_NUM'
-  - '&u_to_U_NAV'
+  - To Num
+  - To Nav
   - ''
   - HOME
   - PG DN
@@ -176,9 +176,9 @@ layers:
   Mouse:
   - ''
   - Boot
-  - '&u_to_U_TAP'
-  - '&u_to_U_EXTRA'
-  - '&u_to_U_BASE'
+  - To Tap
+  - To Extra
+  - To Base
   - ''
   - Again
   - Paste
@@ -201,8 +201,8 @@ layers:
   - ''
   - ''
   - RALT
-  - '&u_to_U_SYM'
-  - '&u_to_U_MOUSE'
+  - To Sym
+  - To Mouse
   - ''
   - ''
   - ''
@@ -219,9 +219,9 @@ layers:
   Media:
   - ''
   - Boot
-  - '&u_to_U_TAP'
-  - '&u_to_U_EXTRA'
-  - '&u_to_U_BASE'
+  - To Tap
+  - To Extra
+  - To Base
   - ''
   - RGB EFF
   - RGB HUI
@@ -244,8 +244,8 @@ layers:
   - ''
   - ''
   - RALT
-  - '&u_to_U_FUN'
-  - '&u_to_U_MEDIA'
+  - To Fun
+  - To Media
   - ''
   - BT 0
   - BT 1
@@ -267,9 +267,9 @@ layers:
   - '9'
   - ']'
   - ''
-  - '&u_to_U_BASE'
-  - '&u_to_U_EXTRA'
-  - '&u_to_U_TAP'
+  - To Base
+  - To Extra
+  - To Tap
   - Boot
   - ''
   - ''
@@ -291,8 +291,8 @@ layers:
   - '3'
   - \
   - ''
-  - '&u_to_U_NUM'
-  - '&u_to_U_NAV'
+  - To Num
+  - To Nav
   - RALT
   - ''
   - ''
@@ -310,9 +310,9 @@ layers:
   - (
   - '}'
   - ''
-  - '&u_to_U_BASE'
-  - '&u_to_U_EXTRA'
-  - '&u_to_U_TAP'
+  - To Base
+  - To Extra
+  - To Tap
   - Boot
   - ''
   - ''
@@ -334,8 +334,8 @@ layers:
   - '#'
   - '|'
   - ''
-  - '&u_to_U_SYM'
-  - '&u_to_U_MOUSE'
+  - To Sym
+  - To Mouse
   - RALT
   - ''
   - ''
@@ -353,9 +353,9 @@ layers:
   - F9
   - PSCRN
   - ''
-  - '&u_to_U_BASE'
-  - '&u_to_U_EXTRA'
-  - '&u_to_U_TAP'
+  - To Base
+  - To Extra
+  - To Tap
   - Boot
   - ''
   - ''
@@ -377,8 +377,8 @@ layers:
   - F3
   - PAUSE BREAK
   - ''
-  - '&u_to_U_FUN'
-  - '&u_to_U_MEDIA'
+  - To Fun
+  - To Media
   - RALT
   - ''
   - ''
