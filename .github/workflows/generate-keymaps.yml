@@ -24,9 +24,9 @@ jobs:
       run: |
         pip install keymap-drawer PyYAML
         
-    - name: Generate 1-Column Layout (Default)
+    - name: Generate 1-Column Layout
       run: |
-        keymap -c raw_configuration.yaml draw keymap-drawer/corne.yaml -o keymap-drawer/corne_raw_config.svg
+        keymap -c config_1_column.yaml draw keymap-drawer/corne.yaml -o keymap-drawer/corne_1_column.svg
         
     - name: Generate 2-Column Layout (Compact)
       run: |
@@ -39,6 +39,10 @@ jobs:
     - name: Generate Dark Theme
       run: |
         keymap -c config_dark.yaml draw keymap-drawer/corne.yaml -o keymap-drawer/corne_dark.svg
+        
+    - name: Generate Raw Configuration Layout
+      run: |
+        keymap -c raw_configuration.yaml draw keymap-drawer/corne.yaml -o keymap-drawer/corne_raw_config.svg
         
     - name: Create layer generation script
       run: |
@@ -57,7 +61,7 @@ jobs:
             
         print(f'Found {len(layers)} layers: {list(layers.keys())}')
         
-        # Generate SVG for each layer
+        # Generate SVG for each layer using raw_configuration.yaml without combos
         for layer_name in layers.keys():
             output_path = f'keymap-drawer/layers/{layer_name.lower()}.svg'
             cmd = [
@@ -65,7 +69,8 @@ jobs:
                 '-c', 'raw_configuration.yaml', 
                 'draw', 'keymap-drawer/corne.yaml', 
                 '-o', output_path,
-                '-s', layer_name
+                '-s', layer_name,
+                '--keys-only'
             ]
             print(f'Generating {layer_name} -> {output_path}')
             try:
@@ -83,6 +88,10 @@ jobs:
     - name: Generate Individual Layer Diagrams
       run: |
         python3 generate_layers.py
+        
+    - name: Generate Combos Diagram
+      run: |
+        keymap -c raw_configuration.yaml draw keymap-drawer/corne.yaml -o keymap-drawer/corne_combos.svg --combos-only
         
     - name: Commit generated files
       run: |

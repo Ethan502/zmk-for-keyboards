@@ -15,6 +15,13 @@ My ZMK configuration for Corne keyboard with Miryoku layout.
 ### Compact Layouts
 
 <details>
+<summary>1-Column Layout (Click to expand)</summary>
+
+![1-Column Layout](keymap-drawer/corne_1_column.svg)
+
+</details>
+
+<details>
 <summary>2-Column Layout (Click to expand)</summary>
 
 ![2-Column Layout](keymap-drawer/corne_2_columns.svg)
@@ -38,6 +45,8 @@ My ZMK configuration for Corne keyboard with Miryoku layout.
 <details>
 <summary>Individual Layers (Click to expand)</summary>
 
+*Each layer shown individually - keys only, no combos*
+
 | Layer | Diagram |
 |-------|---------|
 | Base | ![Base Layer](keymap-drawer/layers/base.svg) |
@@ -50,6 +59,15 @@ My ZMK configuration for Corne keyboard with Miryoku layout.
 | Media | ![Media Layer](keymap-drawer/layers/media.svg) |
 | Button | ![Button Layer](keymap-drawer/layers/button.svg) |
 | Tap | ![Tap Layer](keymap-drawer/layers/tap.svg) |
+
+</details>
+
+<details>
+<summary>Combo Keys (Click to expand)</summary>
+
+![Combos](keymap-drawer/corne_combos.svg)
+
+*Dedicated visualization showing all combo key combinations using raw_configuration.yaml style*
 
 </details>
 
