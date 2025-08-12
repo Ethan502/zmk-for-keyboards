@@ -67,7 +67,7 @@ My ZMK configuration for Corne keyboard with Miryoku layout.
 
 ![Combos](keymap-drawer/corne_combos.svg)
 
-*Dedicated visualization showing all combo key combinations using raw_configuration.yaml style*
+*Dedicated visualization showing all combo key combinations using keymap-drawer/raw_configuration.yaml style*
 
 </details>
 

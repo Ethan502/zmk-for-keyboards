@@ -32,7 +32,7 @@ jobs:
       run: |
         echo "Attempting to parse keymap (ZMK -> YAML)"
         set +e
-        keymap -c raw_configuration.yaml parse -z config/corne.keymap > keymap-drawer/corne.parsed.yaml
+        keymap -c keymap-drawer/raw_configuration.yaml parse -z config/corne.keymap > keymap-drawer/corne.parsed.yaml
         status=$?
         set -e
         if [ $status -ne 0 ]; then
@@ -45,31 +45,31 @@ jobs:
       run: |
         INPUT_YAML=keymap-drawer/corne.yaml
         if [ -f keymap-drawer/corne.parsed.yaml ]; then INPUT_YAML=keymap-drawer/corne.parsed.yaml; fi
-        keymap -c config_1_column.yaml draw "$INPUT_YAML" -o keymap-drawer/corne_1_column.svg
+        keymap -c keymap-drawer/config_1_column.yaml draw "$INPUT_YAML" -o keymap-drawer/corne_1_column.svg
         
     - name: Generate 2-Column Layout (Compact)
       run: |
         INPUT_YAML=keymap-drawer/corne.yaml
         if [ -f keymap-drawer/corne.parsed.yaml ]; then INPUT_YAML=keymap-drawer/corne.parsed.yaml; fi
-        keymap -c config_2_columns.yaml draw "$INPUT_YAML" -o keymap-drawer/corne_2_columns.svg
+        keymap -c keymap-drawer/config_2_columns.yaml draw "$INPUT_YAML" -o keymap-drawer/corne_2_columns.svg
         
     - name: Generate 3-Column Layout (Very Compact)
       run: |
         INPUT_YAML=keymap-drawer/corne.yaml
         if [ -f keymap-drawer/corne.parsed.yaml ]; then INPUT_YAML=keymap-drawer/corne.parsed.yaml; fi
-        keymap -c config_3_columns.yaml draw "$INPUT_YAML" -o keymap-drawer/corne_3_columns.svg
+        keymap -c keymap-drawer/config_3_columns.yaml draw "$INPUT_YAML" -o keymap-drawer/corne_3_columns.svg
         
     - name: Generate Dark Theme
       run: |
         INPUT_YAML=keymap-drawer/corne.yaml
         if [ -f keymap-drawer/corne.parsed.yaml ]; then INPUT_YAML=keymap-drawer/corne.parsed.yaml; fi
-        keymap -c config_dark.yaml draw "$INPUT_YAML" -o keymap-drawer/corne_dark.svg
+        keymap -c keymap-drawer/config_dark.yaml draw "$INPUT_YAML" -o keymap-drawer/corne_dark.svg
         
     - name: Generate Raw Configuration Layout
       run: |
         INPUT_YAML=keymap-drawer/corne.yaml
         if [ -f keymap-drawer/corne.parsed.yaml ]; then INPUT_YAML=keymap-drawer/corne.parsed.yaml; fi
-        keymap -c raw_configuration.yaml draw "$INPUT_YAML" -o keymap-drawer/corne_raw_config.svg
+        keymap -c keymap-drawer/raw_configuration.yaml draw "$INPUT_YAML" -o keymap-drawer/corne_raw_config.svg
         
     - name: Generate Individual Layer Diagrams
       run: |
@@ -79,14 +79,14 @@ jobs:
         for L in Base Extra Tap Button Nav Mouse Media Num Sym Fun; do
           OUT="keymap-drawer/layers/${L,,}.svg"
           echo "Generating $L -> $OUT"
-          keymap -c raw_configuration.yaml draw "$INPUT_YAML" -o "$OUT" -s "$L" --keys-only
+          keymap -c keymap-drawer/raw_configuration.yaml draw "$INPUT_YAML" -o "$OUT" -s "$L" --keys-only
         done
         
     - name: Generate Combos Diagram
       run: |
         INPUT_YAML=keymap-drawer/corne.yaml
         if [ -f keymap-drawer/corne.parsed.yaml ]; then INPUT_YAML=keymap-drawer/corne.parsed.yaml; fi
-        keymap -c raw_configuration.yaml draw "$INPUT_YAML" -o keymap-drawer/corne_combos.svg --combos-only
+        keymap -c keymap-drawer/raw_configuration.yaml draw "$INPUT_YAML" -o keymap-drawer/corne_combos.svg --combos-only
         
     - name: Commit generated files
       run: |
