@@ -39,9 +39,9 @@ layers:
   - ''
   - {t: ESC, h: Media}
   - {t: TAB, h: Nav}
+  - {t: BSPC, h: Num}
   - {t: SPACE, h: Mouse}
   - {t: RET, h: Sym}
-  - {t: BSPC, h: Num}
   - {t: DEL, h: Fun}
   Extra:
   - ''
@@ -82,11 +82,11 @@ layers:
   - ''
   - {t: ESC, h: Media}
   - {t: SPACE, h: Nav}
+  - {t: BSPC, h: Num}
   - {t: TAB, h: Mouse}
   - {t: RET, h: Sym}
-  - {t: BSPC, h: Num}
   - {t: DEL, h: Fun}
-  Tap: ['', Q, W, E, R, T, Y, U, I, O, P, '', '', A, S, D, F, G, H, J, K, L, '''', '', '', Z, X, C, V, B, N, M, ',', ., /, '', ESC, SPACE, TAB, RET, BSPC, DEL]
+  Tap: ['', Q, W, E, R, T, Y, U, I, O, P, '', '', A, S, D, F, G, H, J, K, L, '''', '', '', Z, X, C, V, B, N, M, ',', ., /, '', ESC, SPACE, BSPC, TAB, RET, DEL]
   Button:
   - ''
   - Undo
@@ -126,9 +126,9 @@ layers:
   - ''
   - Middle Button
   - Left Button
-  - Right Button
-  - Right Button
   - Left Button
+  - Right Button
+  - Right Button
   - Middle Button
   Nav:
   - ''
@@ -169,9 +169,9 @@ layers:
   - ''
   - ''
   - {type: held}
+  - BSPC
   - ''
   - RET
-  - BSPC
   - DEL
   Mouse:
   - ''
@@ -212,9 +212,9 @@ layers:
   - ''
   - ''
   - ''
+  - Left Button
   - {type: held}
   - Right Button
-  - Left Button
   - Middle Button
   Media:
   - ''
@@ -255,9 +255,9 @@ layers:
   - ''
   - {type: held}
   - ''
+  - PP
   - ''
   - STOP
-  - PP
   - MUTE
   Num:
   - ''
@@ -298,9 +298,9 @@ layers:
   - ''
   - .
   - '0'
+  - {type: held}
   - '-'
   - ''
-  - {type: held}
   - ''
   Sym:
   - ''
@@ -341,9 +341,9 @@ layers:
   - ''
   - (
   - )
+  - ''
   - _
   - {type: held}
-  - ''
   - ''
   Fun:
   - ''
@@ -384,7 +384,7 @@ layers:
   - ''
   - APP
   - SPACE
-  - TAB
   - ''
+  - TAB
   - ''
   - {type: held}
